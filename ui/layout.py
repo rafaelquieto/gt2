@@ -1,8 +1,10 @@
 import flet as ft
 
-from ui.pages.exercise import build_exercises_page
-from ui.pages.workout_today import build_workout_today_page
-from ui.pages.settings import build_settings_page
+#from ui.pages.exercise import build_exercises_page
+#from ui.pages.workout_today import build_workout_today_page
+#from ui.pages.settings import build_settings_page
+from ui.pages.workout_today import workout_today_page
+
 
 
 def render_app(page: ft.Page, state, render):
@@ -11,13 +13,13 @@ def render_app(page: ft.Page, state, render):
 
     # Escolhe página
     if state.route == "workout_today":
-        content = build_workout_today_page(page, state, render)
+        content = workout_today_page(page)
         selected_index = 0
     elif state.route == "exercises":
-        content = build_exercises_page(page, state, render)
+        content = ft.Text("Exercises (em breve)")
         selected_index = 1
     else:
-        content = build_settings_page(page, state, render)
+        content = ft.Text("Settings (em breve)")
         selected_index = 2
 
     # NavigationBar: no Flet atual, é idiomático usar page.navigation_bar

@@ -25,7 +25,6 @@ def main(page: ft.Page):
     # 3) Primeiro desenho da tela
     render()
 
-
 if __name__ == "__main__":
     ft.run(main=main, view=ft.AppView.WEB_BROWSER)
 

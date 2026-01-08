@@ -18,7 +18,7 @@ from dataclasses import dataclass, field
 @dataclass
 class AppState:
     # rota/página atual
-    route: str = "exercises"  # "workout_today", "settings"
+    route: str = "workout_today"  # "workout_today", "settings"
 
     # dados em memória (MVP)
     exercises: list[str] = field(default_factory=list)    #a funcao list cria uma lista nova e virgem para essa instancia. garante que se eu adicionar um exercicio para o dia 1 ele nao sera adicinado tambe ao dia dois
